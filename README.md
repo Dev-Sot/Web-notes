@@ -1,2 +1,10 @@
-# Web-notes
-Personal notes of HTML, CSS and JavaScript
+# 🌐 Web Dev Journey: HTML, CSS & JavaScript 
+
+<img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" width="300" alt="Web Development Illustration" style="border-radius:8px;margin:0 auto;display:block;">
+
+> **Personal knowledge repository for the modern web development foundation**  
+>  
+> **Knowledge base** · **Live project**: [yourwebsite.com]()  
+>  
+> Última actualización: `07/08/2025` 
+
