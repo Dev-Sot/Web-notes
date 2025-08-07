@@ -6,5 +6,5 @@
 >  
 > **Knowledge base** · **Live project**: [yourwebsite.com]()  
 >  
-> Última actualización: `07/08/2025` 
+>  Last update: `07/08/2025` 
 
