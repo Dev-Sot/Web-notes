@@ -4,7 +4,7 @@
 
 > **Web Development Learning Repository**  
 >  
-> **Knowledge base** · **Live project**: [https://dev-sot.github.io/Web-notes/]()  
+> **Knowledge base** · **Live project**: [wait]()  
 >  
 >  Last update: `07/08/2025` 
 
