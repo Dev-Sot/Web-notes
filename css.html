@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Apuntes CSS</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="subpage">
   <header>
     <h1>Apuntes de CSS</h1>
-    <img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" alt="CSS">
+    <img src="https://i.pinimg.com/736x/37/a1/eb/37a1eba4115e0a1c2de3a266bc8c5963.jpg" alt="CSS" class="header-img">
   </header>
 
   <nav>
@@ -20,37 +21,106 @@
   <main>
     <section>
       <h2>¿Qué es CSS?</h2>
-      <p>CSS (Hojas de Estilo en Cascada) es el lenguaje que se usa para dar estilo a los documentos HTML. Permite controlar colores, fuentes, márgenes y más.</p>
+      <p>CSS (<em>Cascading Style Sheets</em> o Hojas de Estilo en Cascada) es el lenguaje que se utiliza para describir la apariencia y el formato de un documento HTML.</p>
+      <p>Permite separar el contenido de la presentación, mejorando la organización y el mantenimiento del código.</p>
     </section>
 
     <section>
-      <h2>What is CSS?</h2>
-      <p>CSS (Cascading Style Sheets) is the language used to style HTML documents. It allows you to control colors, fonts, margins, and more.</p>
-    </section>
-
-    <section>
-      <h2>Temas clave / Key Topics</h2>
+      <h2>Tipos de CSS</h2>
       <ul>
-        <li><strong>Selectores / Selectors</strong>: <code>elemento</code>, <code>.clase</code>, <code>#id</code></li>
-        <li><strong>Propiedades / Properties</strong>: <code>color</code>, <code>background</code>, <code>margin</code>, <code>padding</code></li>
-        <li><strong>Modelo de caja / Box Model</strong></li>
-        <li><strong>Flexbox</strong> y <strong>Grid</strong> para layouts</li>
-        <li><strong>Media Queries</strong> para diseño responsivo</li>
+        <li><strong>En línea</strong>: dentro de una etiqueta HTML con el atributo <code>style</code>.</li>
+        <li><strong>Interno</strong>: dentro de una etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code>.</li>
+        <li><strong>Externo</strong>: en un archivo separado con extensión <code>.css</code> enlazado con <code>&lt;link&gt;</code>.</li>
       </ul>
+      <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
     </section>
 
     <section>
-      <h2>Ejemplo básico / Basic Example</h2>
+      <h2>Selectores</h2>
+      <ul>
+        <li><code>p</code> → Todos los párrafos.</li>
+        <li><code>.clase</code> → Elementos con esa clase.</li>
+        <li><code>#id</code> → Elemento con ese identificador.</li>
+        <li><code>elemento elemento</code> → Elementos dentro de otros.</li>
+        <li><code>elemento:hover</code> → Estado al pasar el mouse.</li>
+      </ul>
+      <pre><code>p {
+  color: blue;
+}
+#titulo {
+  font-size: 24px;
+}
+.boton:hover {
+  background-color: yellow;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Propiedades comunes</h2>
+      <ul>
+        <li><code>color</code> → color del texto.</li>
+        <li><code>background-color</code> → color de fondo.</li>
+        <li><code>margin</code> → espacio exterior.</li>
+        <li><code>padding</code> → espacio interior.</li>
+        <li><code>border</code> → borde del elemento.</li>
+        <li><code>font-family</code> → tipo de letra.</li>
+      </ul>
       <pre><code>body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
   color: #333;
+  margin: 0;
+  padding: 0;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Modelo de Caja (Box Model)</h2>
+      <p>Todos los elementos en HTML se representan como cajas que incluyen:</p>
+      <ul>
+        <li><strong>Content</strong>: el contenido.</li>
+        <li><strong>Padding</strong>: espacio entre el contenido y el borde.</li>
+        <li><strong>Border</strong>: el borde del elemento.</li>
+        <li><strong>Margin</strong>: espacio exterior al borde.</li>
+      </ul>
+      <pre><code>div {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Diseño con Flexbox</h2>
+      <pre><code>.container {
+  display: flex;
+  justify-content: center; /* alinea horizontalmente */
+  align-items: center; /* alinea verticalmente */
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Diseño con Grid</h2>
+      <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Media Queries</h2>
+      <p>Permiten adaptar el diseño según el tamaño de la pantalla.</p>
+      <pre><code>@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }</code></pre>
     </section>
   </main>
 
   <footer>
-    <p>NG FM · Página CSS · Última actualización: <span id="fecha-actual"></span></p>
+    <p>NG · Página Css · Última actualización: <span id="fecha-actual"></span></p>
   </footer>
 
   <script src="js/main.js"></script>

@@ -2,64 +2,206 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Apuntes HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apuntes de HTML</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Apuntes claros y prácticos para aprender HTML: conceptos, etiquetas, ejemplos y buenas prácticas.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+
+  <!-- Header con imagen horizontal -->
+  <header class="horizontal">
     <h1>Apuntes de HTML</h1>
-    <img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" alt="HTML">
+    <img src="https://i.pinimg.com/1200x/82/74/01/8274016185f1d2fc0b079d78791eeead.jpg" alt="Logo HTML">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="css.html">CSS</a>
+      <a href="js.html">JavaScript</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="css.html">CSS</a>
-    <a href="js.html">JavaScript</a>
-  </nav>
-
+  <!-- Contenido principal -->
   <main>
+    <!--Apuntes -->
     <section>
       <h2>¿Qué es HTML?</h2>
-      <p>HTML (Lenguaje de Marcado de Hipertexto) es el lenguaje estándar para crear páginas web. Permite estructurar el contenido mediante etiquetas.</p>
+      <p>
+        HTML (Lenguaje de Marcado de Hipertexto) es el lenguaje estándar para crear páginas web. 
+        Permite estructurar el contenido mediante etiquetas, que definen títulos, párrafos, imágenes, enlaces, listas, tablas, formularios y otros elementos. 
+        No es un lenguaje de programación, sino de marcado, lo que significa que describe la estructura y el significado del contenido.
+      </p>
     </section>
 
     <section>
       <h2>What is HTML?</h2>
-      <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It allows you to structure content using tags.</p>
+      <p>
+        HTML (HyperText Markup Language) is the standard language for creating web pages. 
+        It allows you to structure content using tags that define headings, paragraphs, images, links, lists, tables, forms, and more. 
+        It is not a programming language but a markup language that describes the structure and meaning of content.
+      </p>
     </section>
 
     <section>
-      <h2>Temas clave / Key Topics</h2>
+      <h2>Etiquetas HTML principales</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Etiquetas</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Etiquetas básicas</td>
+            <td>&lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;a&gt;, &lt;img&gt;</td>
+            <td>Se usan para párrafos, títulos, enlaces e imágenes.</td>
+          </tr>
+          <tr>
+            <td>Listas</td>
+            <td>&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;</td>
+            <td>Listas ordenadas y desordenadas para organizar información.</td>
+          </tr>
+          <tr>
+            <td>Tablas</td>
+            <td>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</td>
+            <td>Permiten mostrar datos en filas y columnas.</td>
+          </tr>
+          <tr>
+            <td>Formularios</td>
+            <td>&lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;button&gt;</td>
+            <td>Capturan datos del usuario como texto, opciones o botones.</td>
+          </tr>
+          <tr>
+            <td>Semántica</td>
+            <td>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</td>
+            <td>Mejoran la estructura y comprensión del contenido.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Ejemplos de uso de etiquetas HTML con código</h2>
+
+      <h3>1. Etiquetas básicas</h3>
+      <pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;h4&gt;Título de nivel 4&lt;/h4&gt;
+&lt;a href="https://developer.mozilla.org/es/docs/Web/HTML"&gt;Enlace a MDN&lt;/a&gt;
+&lt;img src="https://via.placeholder.com/150" alt="Ejemplo de imagen"&gt;
+      </code></pre>
+      <p>Resultado:</p>
+      <p>Este es un párrafo.</p>
+      <h4>Título de nivel 4</h4>
+      <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Enlace a MDN</a>
+      <br>
+      <img src="https://via.placeholder.com/150" alt="Ejemplo de imagen">
+
+      <h3>2. Listas</h3>
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;Elemento uno&lt;/li&gt;
+  &lt;li&gt;Elemento dos&lt;/li&gt;
+  &lt;li&gt;Elemento tres&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Elemento A&lt;/li&gt;
+  &lt;li&gt;Elemento B&lt;/li&gt;
+  &lt;li&gt;Elemento C&lt;/li&gt;
+&lt;/ul&gt;
+      </code></pre>
+      <p>Resultado:</p>
+      <ol>
+        <li>Elemento uno</li>
+        <li>Elemento dos</li>
+        <li>Elemento tres</li>
+      </ol>
       <ul>
-        <li><strong>Etiquetas básicas / Basic tags</strong>: <code>&lt;p&gt;</code>, <code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code></li>
-        <li><strong>Listas / Lists</strong>: ordenadas (<code>&lt;ol&gt;</code>) y desordenadas (<code>&lt;ul&gt;</code>)</li>
-        <li><strong>Tablas / Tables</strong>: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
-        <li><strong>Formularios / Forms</strong>: <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;button&gt;</code></li>
-        <li><strong>Semántica / Semantics</strong>: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></li>
+        <li>Elemento A</li>
+        <li>Elemento B</li>
+        <li>Elemento C</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Ejemplo básico / Basic Example</h2>
-      <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Mi primera página&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hola mundo&lt;/h1&gt;
-    &lt;p&gt;¡Bienvenido a HTML!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+      <h3>3. Tablas</h3>
+      <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Juan&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </code></pre>
+      <p>Resultado:</p>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ana</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Juan</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4. Formularios</h3>
+      <pre><code>&lt;form&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre" name="nombre"&gt;
+  &lt;br&gt;
+  &lt;label for="correo"&gt;Correo:&lt;/label&gt;
+  &lt;input type="email" id="correo" name="correo"&gt;
+  &lt;br&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+      </code></pre>
+      <p>Resultado:</p>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo">
+        <br>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <h3>5. Etiquetas semánticas</h3>
+      <pre><code>&lt;header&gt;Esto es un encabezado de sección&lt;/header&gt;
+&lt;main&gt;Esto es el contenido principal&lt;/main&gt;
+&lt;footer&gt;Esto es el pie de página&lt;/footer&gt;
+      </code></pre>
+      <p>Resultado:</p>
+      <header style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        Esto es un encabezado de sección
+      </header>
+      <main style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        Esto es el contenido principal
+      </main>
+      <footer style="border: 1px solid #ccc; padding: 10px;">
+        Esto es el pie de página
+      </footer>
     </section>
   </main>
 
+  <!-- Pie -->
   <footer>
-    <p>NG FM · Página HTML · Última actualización: <span id="fecha-actual"></span></p>
+    <p>NG - かまわない</p>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

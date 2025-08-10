@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Apuntes JavaScript</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="subpage">
   <header>
     <h1>Apuntes de JavaScript</h1>
-    <img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" alt="JavaScript">
+    <img src="https://i.pinimg.com/736x/37/a1/eb/37a1eba4115e0a1c2de3a266bc8c5963.jpg" alt="JavaScript">
   </header>
 
   <nav>
@@ -20,35 +21,93 @@
   <main>
     <section>
       <h2>¿Qué es JavaScript?</h2>
-      <p>JavaScript es un lenguaje de programación que permite agregar interactividad a las páginas web, como animaciones, validaciones de formularios, etc.</p>
+      <p>JavaScript es un lenguaje de programación que se utiliza para añadir interactividad y dinamismo a las páginas web. Funciona en el navegador del usuario y puede manipular el contenido, el estilo y la estructura de un documento HTML.</p>
     </section>
 
     <section>
       <h2>What is JavaScript?</h2>
-      <p>JavaScript is a programming language that allows you to add interactivity to web pages, such as animations, form validations, etc.</p>
+      <p>JavaScript is a programming language used to add interactivity and dynamism to web pages. It runs in the user's browser and can manipulate the content, style, and structure of an HTML document.</p>
     </section>
 
     <section>
       <h2>Temas clave / Key Topics</h2>
       <ul>
-        <li><strong>Variables</strong>: <code>let</code>, <code>const</code>, <code>var</code></li>
-        <li><strong>Funciones / Functions</strong>: tradicionales y flecha</li>
-        <li><strong>Eventos / Events</strong>: <code>onclick</code>, <code>oninput</code>, etc.</li>
-        <li><strong>DOM</strong>: manipulación de elementos HTML</li>
-        <li><strong>Condicionales y bucles / Conditionals & loops</strong>: <code>if</code>, <code>for</code>, <code>while</code></li>
+        <li><strong>Variables</strong>: <code>let</code> (variable de bloque), <code>const</code> (constante), <code>var</code> (antigua, evita usarla).</li>
+        <li><strong>Tipos de datos</strong>: <em>string</em>, <em>number</em>, <em>boolean</em>, <em>object</em>, <em>array</em>, <em>null</em>, <em>undefined</em>.</li>
+        <li><strong>Funciones</strong>:
+          <ul>
+            <li>Tradicionales: <code>function nombre() { ... }</code></li>
+            <li>Flecha: <code>const suma = (a, b) => a + b;</code></li>
+          </ul>
+        </li>
+        <li><strong>Eventos</strong>: <code>onclick</code>, <code>oninput</code>, <code>addEventListener</code>.</li>
+        <li><strong>DOM</strong>: seleccionar y modificar elementos HTML con <code>document.querySelector</code>, <code>innerHTML</code>, <code>style</code>, etc.</li>
+        <li><strong>Condicionales</strong>: <code>if</code>, <code>else</code>, <code>switch</code>.</li>
+        <li><strong>Bucles</strong>: <code>for</code>, <code>while</code>, <code>forEach</code>.</li>
       </ul>
     </section>
 
     <section>
       <h2>Ejemplo básico / Basic Example</h2>
-      <pre><code>document.querySelector("h1").addEventListener("click", () => {
+      <pre><code>// Mostrar un mensaje al hacer clic en el título
+document.querySelector("h1").addEventListener("click", () => {
   alert("¡Hola desde JavaScript!");
-});</code></pre>
+});
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de Variables y Operaciones</h2>
+      <pre><code>// Declarar variables
+let nombre = "Nelson";
+const edad = 20;
+let esEstudiante = true;
+
+// Operación básica
+let añoNacimiento = 2025 - edad;
+
+console.log("Nombre:", nombre);
+console.log("Año de nacimiento:", añoNacimiento);
+console.log("¿Es estudiante?", esEstudiante);
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de Condicionales</h2>
+      <pre><code>let temperatura = 30;
+
+if (temperatura > 25) {
+  console.log("Hace calor");
+} else {
+  console.log("El clima está agradable");
+}
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de Bucle</h2>
+      <pre><code>let frutas = ["Manzana", "Banana", "Naranja"];
+
+for (let i = 0; i < frutas.length; i++) {
+  console.log("Fruta:", frutas[i]);
+}
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de Interacción con el DOM</h2>
+      <pre><code>// Cambiar el color de un párrafo con id="demo"
+document.getElementById("demo").style.color = "red";
+
+// Cambiar el texto
+document.getElementById("demo").innerHTML = "Texto cambiado por JavaScript";
+</code></pre>
+      <p id="demo">Texto original</p>
     </section>
   </main>
 
   <footer>
-    <p>NG FM · Página JavaScript · Última actualización: <span id="fecha-actual"></span></p>
+    <p>NG · Página JavaScript · Última actualización: <span id="fecha-actual"></span></p>
   </footer>
 
   <script src="js/main.js"></script>

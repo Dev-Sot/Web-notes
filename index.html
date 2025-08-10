@@ -2,20 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mis Apuntes Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>My web development notes</h1>
-    <img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" alt="Desarrollo Web">
-  </header>
+<body class="index-page">
 
-  <nav>
-    <a href="html.html">HTML</a>
-    <a href="css.html">CSS</a>
-    <a href="js.html">JavaScript</a>
-  </nav>
+
+  <!-- Hero con imagen y texto -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>My Web Development Notes</h1>
+      <nav>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="js.html">JavaScript</a>
+      </nav>
+    </div>
+    <div class="hero-image">
+      <img src="https://i.pinimg.com/736x/de/95/a6/de95a633ed09f358e1ad033cf0405d00.jpg" alt="Banner">
+    </div>
+  </header>
 
   <main>
     <section>
@@ -37,7 +45,7 @@
   </main>
 
   <footer>
-    <p> Dev-Sot · Proyecto de aprendizaje personal / Personal learning project.</p>
+    <p>Dev-Sot · Proyecto de aprendizaje personal / Personal learning project.</p>
   </footer>
 
   <script src="js/main.js"></script>
